@@ -1,0 +1,46 @@
+{
+    // Use this launch configuration to run the compiled binary and show output in the Debug Console (internalConsole).
+    // Note: Debug Console does not accept stdin. Use the "args" array to pass data, or use Integrated Terminal for interactive input.
+    "version": "0.2.0",
+    "configurations": [
+        {
+          "name": "Run binary in Debug Console",
+          "type": "cppdbg",
+          "request": "launch",
+          "program": "${workspaceFolder}\\login-backend\\binary.exe",
+          "preLaunchTask": "build-binary",
+          "args": ["3","1","2","3","2"],
+          "stopAtEntry": false,
+          "cwd": "${workspaceFolder}\\login-backend",
+          "environment": [],
+          "externalConsole": false,
+          "console": "internalConsole",
+          "MIMode": "gdb",
+          "miDebuggerPath": "C:/MinGW/bin/gdb.exe"
+        }
+    ]
+}
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": ".",
+      "program": "build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
